@@ -1,0 +1,20 @@
+const mongoose = require("mongoose");
+
+let noteSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+//Export the model
+module.exports = mongoose.model("Note", noteSchema);
